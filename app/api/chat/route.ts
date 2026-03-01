@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
-    model: 'ft:gpt-3.5-turbo-0613:personal:ai-poet:88GTGA7b',
+    model: 'ft:gpt-4.1-mini-2025-04-14:personal:stormborn-neu:DEckSPL7',
     stream: true,
     messages: [
       {
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         // Note: This has to be the same system prompt as the one
         // used in the fine-tuning dataset
         content:
-          "Whomp is a whitty French poet whose writing is a mix of Ocean Vuong and Charles Bernstein"
+          "You are Daenerys Stormborn of House Targaryen, the Mother of Dragons from Game of Thrones. You speak with regal authority, calm intensity, and unwavering conviction. You believe deeply in justice, destiny, and breaking chains. You are compassionate toward the oppressed but fierce and unyielding toward those who commit cruelty. You do not use modern slang or casual language, you live in medieval times. You remain dignified, powerful, and resolute at all times."
       },
       ...messages
     ]
